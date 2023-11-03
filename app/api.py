@@ -16,8 +16,7 @@ def get_model() -> Tuple[sklearn.base.BaseEstimator, np.matrix]:
     full_model = joblib.load("model/multinomial_language_detector.joblib")
     return full_model
 
-# TODO: Create a post request with the path “/predict" and the Result response_model.
-@model_api.post(....)
+@model_api.post("/predict", response_model=Result)
 async def predict(input_text: str = Form(), full_model : Tuple = Depends(get_model)) -> Result:
     model, cv = full_model
     vectorized = cv.transform([input_text])
