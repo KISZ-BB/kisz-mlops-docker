@@ -1,0 +1,4 @@
+.venv
+model/language_detection.csv
+model/model_trainer.ipynb
+model/__pycache__
