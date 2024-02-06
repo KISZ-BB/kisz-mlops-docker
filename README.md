@@ -4,6 +4,8 @@
 Welcome to our workshop on deploying machine learning models using Docker, hosted by the AI Service Center in Berlin-Brandenburg. 
 Visit our [website](https://hpi.de/en/kisz/home.html) for more details about our offerings!
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KISZ-BB/kisz-mlops-docker/)
+
 ## Installation Guide
 This guide provides instructions for installing and setting up all the tools and environments you need to participate in the workshop.
 Familiarity with opening and using a terminal is required. Here's how you can start a terminal:
