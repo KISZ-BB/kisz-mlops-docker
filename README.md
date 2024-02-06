@@ -1,12 +1,15 @@
 [![logo.png](logo.png)](https://hpi.de/en/kisz/home.html)
 
-# Containerize your intelligence: A hands-on workshop on deploying AI models with Docker
+# Containerize your intelligence: A hands-on Workshop on Deploying AI models with Docker
 Welcome to our workshop on deploying machine learning models using Docker, hosted by the AI Service Center in Berlin-Brandenburg. 
 Visit our [website](https://hpi.de/en/kisz/home.html) for more details about our offerings!
 
+## Open this Repository on Gitpod
+We can follow this workshop fully through Gitpod's VSCode, **no need to install software locally**, but we also provide the instructions for a local installation as an option.
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KISZ-BB/kisz-mlops-docker/)
 
-## Installation Guide
+## Local Installation Guide
 This guide provides instructions for installing and setting up all the tools and environments you need to participate in the workshop.
 Familiarity with opening and using a terminal is required. Here's how you can start a terminal:
 
