@@ -6,3 +6,4 @@ pandas
 numpy
 uvicorn
 python-multipart
+openai
