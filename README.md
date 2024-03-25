@@ -57,23 +57,13 @@ Once you've installed Git, Docker, and an IDE, you're all set for our workshop. 
 6. Remove your Docker container with the command: ```docker rm [ID]```
 7. Create a self-deleting container with the ```hello-world``` image using: ```docker run --rm hello-world```
 
-### Hands-On 2: Running Jupyter with Docker
-1. Download the image: ```docker pull jupyter/base-notebook```
-2. Start a self-deleting container using the command: ```docker run --rm jupyter/base-notebook```
-3. Read the terminal output can you access it?
-5. Forward the port ```8888``` from the Docker container to the host machine: ```docker run -p 8888:8888 --rm jupyter/base-notebook```
+### Hands-On 2: Model Training with Jupyter
+1. Open ```model/model_trainer.ipynb```.
+2. Run all cells in the Jupyter notebook.
+3. Explain the code to your neighbour to make sure you understand it.
+4. Try changing the input text in the last cell. Do the answers make sense?
 
-### Hands-On 3: Bind Mount
-**Problem:** The container cannot access our file on our host machine. 
-
-**Solution:** Use a bind mount to access our **model** directory inside the Jupyter Notebook.
-
-**Task:** Complete the following command: ```docker run […] -p 8888:8888 --rm jupyter/base-notebook```
-
-1. Read Docker Documentation: https://docs.docker.com/storage/bind-mounts/
-2. **Hint:**  Mount the **model** source folder from the clone of the workshop code to the ```/home/jovyan/work``` target folder in the Docker container.
-
-### Hands-On 4: FastAPI
+### Hands-On 3: FastAPI
 **Task:** Fill out the **TODOs** in the ```app/api.py``` file
 1. Read the FastAPI documentation: https://fastapi.tiangolo.com/tutorial/response-model/#response_model-parameter
 2. Read about the request body: https://fastapi.tiangolo.com/tutorial/body/
@@ -81,8 +71,7 @@ Once you've installed Git, Docker, and an IDE, you're all set for our workshop. 
 4. You should be dropped into a `bash` environment in a new python docker container. You can run `cd /app` to change the current path to the repository.
 5. You can test if your API is correctly defined py running `python3 app/api.py` and opening `http://0.0.0.0:8000` in your browser.
 
-
-### Hands-On 5: Dockerfile
+### Hands-On 4: Dockerfile
 1. Create a file with the name **Dockerfile**
 2. Find **Python version 3.11** on [Docker Hub](https://hub.docker.com/) and use it as a Base Image: ```FROM your-base-image:1.0```
 3. Change the working directory inside of the container: ```WORKDIR /app```
@@ -91,7 +80,7 @@ Once you've installed Git, Docker, and an IDE, you're all set for our workshop. 
 6. Copy the rest of the application into the container: ```COPY /from-host/ /to-container/```
 7. Start the uvicorn server through the terminal command: ```CMD uvicorn app.location:api_name --host 0.0.0.0```
 
-### Live-Demo: Deploying the Container with Docker Compose
+### Hands-On 5: Deploying the Container with Docker Compose
 1. Build and run the Docker container with Docker Compose: ```docker compose up --build```
 2. **Problem:** Container shuts down when terminal closes. **Solution:** ```docker compose up -d```
 3. **Problem:** Container doesn't restart when machine restarts. **Solution:** Add ```restart:always``` to the ```compose.yaml``` file.
