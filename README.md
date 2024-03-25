@@ -67,9 +67,7 @@ Once you've installed Git, Docker, and an IDE, you're all set for our workshop. 
 **Task:** Fill out the **TODOs** in the ```app/api.py``` file
 1. Read the FastAPI documentation: https://fastapi.tiangolo.com/tutorial/response-model/#response_model-parameter
 2. Read about the request body: https://fastapi.tiangolo.com/tutorial/body/
-3. Setup a test environment by running `docker run --rm -it -p 8000:8000 -v .:/app python:3.11 bash` in the base directory of the checked out repository.
-4. You should be dropped into a `bash` environment in a new python docker container. You can run `cd /app` to change the current path to the repository.
-5. You can test if your API is correctly defined py running `python3 app/api.py` and opening `http://0.0.0.0:8000` in your browser.
+3. You can test if your API is correctly defined py running `python3 app/api.py` and opening `http://0.0.0.0:8000` in your browser.
 
 ### Hands-On 4: Dockerfile
 1. Create a file with the name **Dockerfile**
