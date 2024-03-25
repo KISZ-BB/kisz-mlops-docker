@@ -17,13 +17,12 @@ def get_model() -> Tuple[sklearn.base.BaseEstimator, np.matrix]:
     return full_model
 
 # TODO: Create a post request with the path “/predict" and the Result response_model.
-@model_api.
+@model_api.post(....)
 async def predict(input_text: str = Form(), full_model : Tuple = Depends(get_model)) -> Result:
     model, cv = full_model
     vectorized = cv.transform([input_text])
     language_prediction = model.predict(vectorized)[0]
-    # TODO: Return a Result Object with the language being the predicted language.
-    return 
+    return Result(language=language_prediction)
 
 model_api.mount("/", StaticFiles(directory="app/static", html=True), name="static")
 if __name__ == "__main__":
